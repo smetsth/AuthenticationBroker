@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="SampleClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SampleClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <Button Click="GetToken">Get Token</Button>
+            <Button Click="CallApi">Call API</Button>
+        </StackPanel>
+
+        <TextBox x:Name="txtLog" Grid.Row="1" AcceptsReturn="True" IsReadOnly="True" />
+    </Grid>
+</Page>
